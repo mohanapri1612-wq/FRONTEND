@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Transition Hover Task</title>
+
+<style>
+
+.button{
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.5s;
+}
+
+.button:hover{
+  background-color: red;
+}
+
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 20px;
+  transition: transform 0.5s;
+}
+
+.box:hover{
+  transform: scale(1.2);
+}
+
+
+.card{
+  width: 150px;
+  padding: 20px;
+  background-color: lightgray;
+  transition: all 0.5s;
+}
+
+.card:hover{
+  background-color: orange;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px gray;
+}
+
+
+.text{
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.show:hover .text{
+  opacity: 1;
+}
+
+</style>
+</head>
+
+<body>
+
+<h3>1. Hover Color Change</h3>
+<button class="button">Hover Me</button>
+
+<h3>2. Grow Box</h3>
+<div class="box"></div>
+
+<h3>3. Change Color Size Shadow</h3>
+<div class="card">Hover Card</div>
+
+<h3>4. Reveal Content</h3>
+<div class="show">
+  Hover here
+  <p class="text">Hidden text appears!</p>
+</div>
+
+</body>
+</html>
