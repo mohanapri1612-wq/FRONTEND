@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Units Task</title>
+        <style>
+            .box{
+                width: 80px;
+                max-width: 600px;
+                border: 2px solid black;
+                padding: 20px;
+                margin: auto;
+                background-color: lightgray;
+            }
+            p{
+                font: size 1.5rem;
+
+            }
+            h1{
+                font-size: 5vw;
+                text-align: center;
+            }
+            @media(max-width:768px){
+                body{
+                    background-color: lightblue;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Responsive Heading</h1>
+        <div class="box">
+            <p>
+                This paragraght uses  1.5rem font size.The text size is based on the root 
+                font size, soit stays consistent on different devices and scales 
+                properly for accessibility.
+            </p>
+            </div>
+    </body>
+</html>
