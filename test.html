@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flex Web Layout</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color:#4c4c4c;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.nav{
+    display:flex;
+    justify-content:center;
+    background-color:#333;
+}
+
+.nav a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+.container{
+    display:flex;
+    padding:10px;
+}
+.main{
+    flex:3;
+    background-color:lightgreen;
+    padding:20px;
+    margin-right:10px;
+}
+.sidebar{
+    flex:1;
+    background-color:lightgray;
+    padding:20px;
+}
+footer{
+    background-color:#4c4c4c;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>My Website</h1>
+</header>
+
+<nav class="nav">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+<div class="main">
+<h2>Main Content</h2>
+<p>This is the main content area of the webpage.</p>
+<p>Flexbox makes layout design easier and responsive.</p>
+</div>
+
+<div class="sidebar">
+<h2>Sidebar</h2>
+<p>This is the sidebar section.</p>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 My Website</p>
+</footer>
+
+</body>
+</html>
