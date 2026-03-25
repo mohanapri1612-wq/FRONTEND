@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Arrays</title>
+</head>
+<body>
+    <h2>Arrays Functions in JavaScript</h2>
+
+    <div id="id1" style="border: 2px solid green; padding:10px;"></div>
+    <br>
+
+    <button onclick="popfun()">POP IN ARRAY</button>
+    <button onclick="pushfun()">PUSH IN ARRAY</button> 
+    <button onclick="shiftfun()">SHIFT IN ARRAY</button>
+    <button onclick="unshiftfun()">UNSHIFT IN ARRAY</button>
+
+    <div id="id2" style="margin-top:10px; font-weight:bold;"></div>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry", "Grapes"];
+
+        function finaldisplay() {
+            document.getElementById("id1").innerText = fruits.join(" - ");
+        }
+
+        // POP function
+        function popfun() {
+            let removed = fruits.pop();
+            document.getElementById("id2").innerText = "pop(): Removed " + removed;
+            finaldisplay();
+        }
+
+        // PUSH function
+        function pushfun() {
+            fruits.push("Orange");
+            document.getElementById("id2").innerText = "push(): Added 'Orange'";
+            finaldisplay();
+        }
+
+        // SHIFT function
+        function shiftfun() {
+            let removed = fruits.shift();
+            document.getElementById("id2").innerText = "shift(): Removed first " + removed;
+            finaldisplay();
+        }
+
+        // UNSHIFT function
+        function unshiftfun() {
+            fruits.unshift("Pears");
+            document.getElementById("id2").innerText = "unshift(): Added 'Pears'";
+            finaldisplay();
+        }
+
+        finaldisplay();
+    </script>
+</body>
+</html>
