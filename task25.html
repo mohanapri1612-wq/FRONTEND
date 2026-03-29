@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods Full Code</title>
+</head>
+<body>
+
+<h2>JavaScript Array Methods Output</h2>
+
+<p id="output"></p>
+
+<script>
+    
+    let numbers = [5, 8, 12, 3, 20, 7];
+    let doubled = numbers.map(num => num * 2);
+    let evenNumbers = numbers.filter(num => num % 2 === 0);
+    let sum = numbers.reduce((total, num) => total + num, 0);
+    let firstGreater = numbers.find(num => num > 10);
+    let check = numbers.includes(8);
+    document.getElementById("output").innerHTML =
+        "Doubled: " + doubled + "<br>" +
+        "Even Numbers: " + evenNumbers + "<br>" +
+        "Sum: " + sum + "<br>" +
+        "First > 10: " + firstGreater + "<br>" +
+        "Includes 8: " + check;
+    console.log("Doubled:", doubled);
+    console.log("Even Numbers:", evenNumbers);
+    console.log("Sum:", sum);
+    console.log("First > 10:", firstGreater);
+    console.log("Includes 8:", check);
+</script>
+
+</body>
+</html>
