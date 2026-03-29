@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events & Async Example</title>
+</head>
+<body>
+
+<h2>JavaScript Events & Async</h2>
+
+<button id="clickBtn">Click Me</button>
+<p id="clickOutput"></p>
+<input type="text" id="nameInput" placeholder="Type something...">
+<p id="inputOutput"></p>
+<form id="myForm">
+    <input type="text" id="formInput" placeholder="Enter name">
+    <button type="submit">Submit</button>
+</form>
+<p id="formOutput"></p>
+
+<script>
+    document.getElementById("clickBtn").onclick = function() {
+        document.getElementById("clickOutput").innerText = "Button Clicked!";
+    };
+    document.getElementById("nameInput").oninput = function() {
+        document.getElementById("inputOutput").innerText = this.value;
+    };
+    document.getElementById("myForm").onsubmit = function(event) {
+        event.preventDefault(); 
+        let value = document.getElementById("formInput").value;
+        document.getElementById("formOutput").innerText = "Submitted: " + value;
+    };
+    document.getElementById("clickBtn").addEventListener("dblclick", function() {
+        alert("Button Double Clicked!");
+    });
+    console.log("Step 1");
+    console.log("Step 2");
+    setTimeout(() => {
+        console.log("Message after 2 seconds");
+    }, 2000);
+    let count = 1;
+    let interval = setInterval(() => {
+        console.log("Counter:", count);
+        count++;
+        if (count > 5) clearInterval(interval);
+    }, 1000);
+</script>
+
+</body>
+</html>
