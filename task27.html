@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Object Example</title>
+    </head>
+    <body>
+
+        <h2>Object Example</h2>
+        <p id="output"></p>
+        <script>
+            let person = {
+                name:"Mohana",
+                age:"21",
+
+                sayHello:function(){
+                    return"Hello,my name is" +this.name;
+                }
+            };
+            let nameValue = person.name;
+            let ageValue = person.age;
+
+            person.age = 22;
+            let messaage = person.sayHello();
+            document.getElementById("output").innerHTML =
+            "Name:" + nameValue +"<br>"+
+            "Age:"  +  ageValue +"<br>"+
+            "Updated Age" +person.age +"<br>" +
+            messaage;
+
+
+        </script>
+    </body>
+</html>
