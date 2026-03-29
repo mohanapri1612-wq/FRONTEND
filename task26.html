@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Features Full Code</title>
+</head>
+<body>
+
+<h2>ES6 & ES6_2 Output</h2>
+<p id="output"></p>
+
+<script>
+    // Using const and let
+    const name = "Mohana";
+    let age = 21;
+
+    // Template literals
+    let text1 = `Name: ${name}, Age: ${age}`;
+
+    // Function with default parameter
+    function greet(user = "Guest") {
+        return `Hello, ${user}!`;
+    }
+
+    let greet1 = greet();
+    let greet2 = greet("Priya");
+
+    // -------- ES6_2 --------
+
+    // Destructuring (Array)
+    const numbers = [10, 20, 30];
+    const [a, b, c] = numbers;
+
+    // Destructuring (Object)
+    const person = {
+        pname: "Ravi",
+        city: "Chennai"
+    };
+    const { pname, city } = person;
+
+    // Spread operator (copy array)
+    const original = [1, 2, 3];
+    const copy = [...original];
+
+    // Rest operator (function)
+    function sumAll(...nums) {
+        return nums.reduce((total, num) => total + num, 0);
+    }
+    let sum = sumAll(5, 10, 15);
+
+    // Display output on webpage
+    document.getElementById("output").innerHTML =
+        text1 + "<br>" +
+        greet1 + "<br>" +
+        greet2 + "<br><br>" +
+        "Destructured Array: " + a + ", " + b + ", " + c + "<br>" +
+        "Destructured Object: " + pname + ", " + city + "<br>" +
+        "Copied Array: " + copy + "<br>" +
+        "Sum using Rest: " + sum;
+
+    // Console output
+    console.log(text1);
+    console.log(greet1);
+    console.log(greet2);
+    console.log("Destructured Array:", a, b, c);
+    console.log("Destructured Object:", pname, city);
+    console.log("Copied Array:", copy);
+    console.log("Sum using Rest:", sum);
+</script>
+
+</body>
+</html>
+</body>
+</html>
